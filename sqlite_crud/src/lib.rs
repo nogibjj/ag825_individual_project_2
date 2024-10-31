@@ -1,5 +1,5 @@
-use csv::ReaderBuilder;
-use reqwest::blocking::get;
+// use csv::ReaderBuilder;
+// use reqwest::blocking::get;
 use rusqlite::{params, Connection, Result};
 use std::error::Error;
 use std::fs::File;
@@ -19,7 +19,7 @@ pub fn extract(url: &str, file_path: &str) -> Result<(), Box<dyn std::error::Err
 pub fn load() -> Result<(), Box<dyn std::error::Error>> {
     let dataset = "Cancer_Data.csv";
 
-    let current_dir = std::env::current_dir()?;
+    // let current_dir = std::env::current_dir()?;
 
     let mut rdr = csv::Reader::from_path(dataset)?;
 

@@ -10,3 +10,7 @@ rusqlite = { version = "0.32.1", features = ["bundled"] }
 
 [lib]
 path = "src/lib.rs"
+
+[[bin]]
+name = "minigrep"
+path = "src/main.rs"
