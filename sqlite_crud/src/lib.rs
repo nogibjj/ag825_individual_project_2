@@ -1,5 +1,4 @@
-// use csv::ReaderBuilder;
-// use reqwest::blocking::get;
+
 use rusqlite::{params, Connection, Result};
 use std::error::Error;
 use std::fs::File;
@@ -162,11 +161,11 @@ pub fn delete(database: &str) -> Result<(), Box<dyn Error>> {
 }
 
 // CRUD function to perform create, read, update, and delete operations
-pub fn crud(database: &str) -> Result<(), Box<dyn Error>> {
+pub fn crud(database: &str) -> Result<String, Box<dyn std::error::Error>> {
     create(database)?;
     read(database)?;
     update(database)?;
     delete(database)?;
 
-    Ok(())
+    Ok("SUCCESS".to_string())
 }

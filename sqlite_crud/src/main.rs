@@ -1,8 +1,9 @@
 use sqlite_crud::crud;
 use sqlite_crud::extract;
 use sqlite_crud::load;
-
 use std::error::Error;
+
+mod test;
 
 fn main() -> Result<(), Box<dyn Error>> {
     let url = "https://raw.githubusercontent.com/nogibjj/ag825_individual_project_2/refs/heads/main/sqlite_crud/Cancer_Data.csv";
